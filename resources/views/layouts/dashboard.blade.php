@@ -200,7 +200,8 @@ scratch. This page gets rid of all links and provides the needed markup only.
                     </div>
                 </div>
 
-                @include('layouts.partials.nav', ['active' => 'dashboard'])
+                {{-- @include('layouts.partials.nav', ['active' => 'dashboard']) --}}
+                <x-nav context="side" />
             </div>
             <!-- /.sidebar -->
         </aside>
