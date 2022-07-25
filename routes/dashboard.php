@@ -3,6 +3,7 @@
 use App\Http\Controllers\Dashboard\CategoriesController;
 use App\Http\Controllers\Dashboard\DashboardController;
 use App\Http\Controllers\Dashboard\ProductsController;
+use App\Http\Controllers\Dashboard\ProfileController;
 use Illuminate\Support\Facades\Route;
 
 Route::group([
@@ -11,6 +12,9 @@ Route::group([
     'prefix' => 'dashboard',
     //'namespace' => 'App\Http\Controllers\Dashboard',
 ], function () {
+
+    Route::get('profile', [ProfileController::class, 'edit'])->name('profile.edit');
+    Route::patch('profile', [ProfileController::class, 'update'])->name('profile.update');
 
     Route::get('/', [DashboardController::class, 'index'])
         ->name('dashboard');

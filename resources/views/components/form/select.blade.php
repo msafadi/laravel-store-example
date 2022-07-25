@@ -1,19 +1,22 @@
 @props([
-    'type' => 'text', 'name', 'value' => '', 'label' => false
+   'name', 'selected' => '', 'label' => false, 'options'
 ])
 
 @if($label)
 <label for="">{{ $label }}</label>
 @endif
 
-<input 
-    type="{{ $type }}"
+<select 
     name="{{ $name }}"
-    value="{{ old($name, $value) }}"
     {{ $attributes->class([
         'form-control',
+        'form-select',
         'is-invalid' => $errors->has($name)
     ]) }}
 >
+    @foreach($options as $value => $text)
+    <option value="{{ $value }}" @selected($value == $selected)>{{ $text }}</option>
+    @endforeach
+</select>
 
 <x-form.validation-feedback :name="$name" />
