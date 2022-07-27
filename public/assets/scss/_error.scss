@@ -1,0 +1,75 @@
+/*======================================
+	Error 404 CSS
+========================================*/
+
+.error-area {
+    height: 100vh;
+    text-align: center;
+    width: auto;
+    margin-left: auto;
+    margin-right: auto;
+    background-color: $white;
+    position: relative;
+    background-image: url('../images/error/404-bg.png');
+    background-repeat: no-repeat;
+    background-position: center;
+}
+
+.d-table {
+    width: 100%;
+    height: 100%;
+}
+
+.d-table {
+    display: table !important;
+}
+
+.d-table-cell {
+    vertical-align: middle;
+}
+
+.d-table-cell {
+    display: table-cell !important;
+}
+
+
+.error-area .error-content {
+    h1 {
+        font-size: 100px;
+        color: $theme-color;
+        margin-bottom: 25px;
+        font-weight: 800;
+        line-height: 100px;
+
+        @media #{$md} {
+            font-size: 60px;
+            line-height: 50px;
+        }
+
+        @media #{$xs} {
+            font-size: 45px;
+            line-height: 30px;
+        }
+    }
+
+    h2 {
+        font-size: 25px;
+        margin-bottom: 10px;
+        color: $black;
+        font-weight: 700;
+
+        @media #{$md} {
+            font-size: 22px;
+        }
+
+        @media #{$xs} {
+            font-size: 18px;
+        }
+    }
+
+    p {
+        font-weight: 400;
+        margin-bottom: 40px;
+        color: #888;
+    }
+}

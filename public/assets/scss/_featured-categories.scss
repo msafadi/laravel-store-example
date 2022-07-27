@@ -1,0 +1,57 @@
+/*======================================
+    Featured Categories Area CSS
+========================================*/
+.featured-categories {
+    .section-title {
+        margin-bottom: 20px;
+    }
+
+    .single-category {
+        padding: 40px;
+        margin-top: 30px;
+        border: 2px solid #f0f0f0;
+        position: relative;
+        background: #fff;
+        z-index: 0;
+
+        .heading {
+            font-size: 17px;
+            font-weight: 700;
+            color: $black;
+        }
+
+        ul {
+            margin-top: 20px;
+
+            li {
+                display: block;
+                margin-bottom: 4px;
+
+                &:last-child {
+                    margin: 0;
+                }
+
+                a {
+                    color: #666;
+
+                    &:hover {
+                        color: $theme-color;
+                        padding-left: 5px;
+                    }
+                }
+            }
+        }
+
+        img {
+            position: absolute;
+            right: 0;
+            top: 50%;
+            transform: translateY(-50%);
+            z-index: -1;
+
+            @media #{$lg} {
+                width: 50%;
+            }
+        }
+    }
+}

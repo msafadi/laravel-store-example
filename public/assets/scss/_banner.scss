@@ -1,0 +1,87 @@
+/*======================================
+    Banner CSS
+========================================*/
+
+.single-banner {
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    border-radius: 4px;
+    overflow: hidden;
+
+    &.custom-responsive-margin {
+
+        @media #{$xs} {
+            margin-top: 30px;
+        }
+    }
+
+    &.right {
+        text-align: right;
+
+        .content {
+            padding: 50px 40px;
+
+        }
+    }
+
+    .content {
+        padding: 70px 40px;
+
+        @media #{$md} {
+            padding: 50px 30px;
+        }
+
+        @media #{$xs} {
+            padding: 35px;
+        }
+
+        h2 {
+            font-size: 22px;
+            font-weight: 700;
+
+            @media #{$md} {
+                font-size: 20px;
+            }
+
+            @media #{$xs} {
+                font-size: 18px;
+            }
+        }
+
+        .price {
+            span {
+                color: $black;
+                display: block;
+                margin-top: 10px;
+                font-size: 22px;
+                font-weight: 700;
+            }
+        }
+
+        p {
+            font-size: 14px;
+            margin-top: 15px;
+
+            @media #{$md} {
+                margin-top: 10px;
+            }
+
+            @media #{$xs} {
+                margin-top: 8px;
+            }
+        }
+
+        .button {
+            margin-top: 25px;
+
+            @media #{$md} {
+                margin-top: 20px;
+            }
+
+            @media #{$xs} {
+                margin-top: 15px;
+            }
+        }
+    }
+}

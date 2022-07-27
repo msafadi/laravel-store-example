@@ -1,0 +1,169 @@
+/*======================================
+    Product CSS
+========================================*/
+
+/* Single Product*/
+.single-product {
+    border: 1px solid #eee;
+    border-radius: 4px;
+    transition: all 0.4s ease;
+    margin-top: 30px;
+    box-shadow: 0px 0px 20px #00000012;
+    padding: 8px;
+    background: #fff;
+
+    .product-image {
+        overflow: hidden;
+        position: relative;
+
+        .sale-tag {
+            background: #f73232;
+            border-radius: 2px;
+            font-size: 12px;
+            color: #fff;
+            font-weight: bold;
+            position: absolute;
+            top: 0;
+            padding: 5px 10px;
+            left: 0;
+            z-index: 22;
+        }
+
+        .new-tag {
+            background: $theme-color;
+            border-radius: 2px;
+            font-size: 12px;
+            color: #fff;
+            font-weight: bold;
+            position: absolute;
+            top: 0;
+            padding: 5px 10px;
+            left: 0;
+            z-index: 22;
+        }
+
+        .button {
+            position: absolute;
+            left: 50%;
+            transform: translateX(-50%);
+            bottom: -60px;
+            transition: all 0.4s ease;
+            opacity: 0;
+            visibility: hidden;
+
+            .btn {
+                padding: 12px 20px;
+                font-size: 13px;
+                font-weight: 600;
+                width: 140px;
+
+                i {
+                    font-size: 18px;
+                    position: relative;
+                    top: 2px;
+                }
+            }
+        }
+
+        img {
+            width: 100%;
+            transition: all 0.4s ease;
+        }
+    }
+
+    &:hover {
+
+        .product-image {
+            .button {
+                bottom: 30px;
+                opacity: 1;
+                visibility: visible;
+            }
+
+            img {
+                transform: scale(1.1);
+            }
+        }
+    }
+
+    .product-info {
+        padding: 20px;
+        background-color: $white;
+
+        .category {
+            color: #888;
+            font-size: 13px;
+            display: block;
+            margin-bottom: 2px;
+        }
+
+        .title {
+            a {
+                font-size: 16px;
+                font-weight: 700;
+                color: $black;
+
+                @media #{$md,$xs} {
+                    font-size: 15px;
+                }
+
+
+                &:hover {
+                    color: $theme-color;
+                }
+            }
+        }
+
+        .review {
+            margin-top: 5px;
+
+            li {
+                display: inline-block;
+
+                i {
+                    color: #fecb00;
+                    font-size: 13px;
+                }
+
+                span {
+                    display: inline-block;
+                    margin-left: 4px;
+                    color: #888;
+                    font-size: 13px;
+                }
+            }
+        }
+
+        .price {
+            margin-top: 15px;
+
+            span {
+                font-size: 17px;
+                font-weight: 700;
+                color: $theme-color;
+                display: inline-block;
+
+            }
+
+            .discount-price {
+                margin: 0;
+                color: #aaaaaa;
+                text-decoration: line-through;
+                font-weight: normal;
+                margin-left: 10px;
+                font-size: 14px;
+                display: inline-block;
+            }
+        }
+
+    }
+}
+
+/* End Single Product */
+.trending-product {
+    background-color: $gray;
+
+    .section-title {
+        margin-bottom: 20px;
+    }
+}

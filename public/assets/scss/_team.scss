@@ -1,0 +1,77 @@
+/*======================================
+    Team CSS
+========================================*/
+.team {
+    background-color: $white;
+
+    .single-team {
+        text-align: center;
+        margin-top: 30px;
+        border: 1px solid #eee;
+        border-radius: 4px;
+        padding: 35px;
+        transition: all 0.4s ease;
+
+        &:hover {
+            box-shadow: 0px 5px 10px rgba(0, 0, 0, 0.123);
+        }
+
+        .image {
+
+
+            img {
+                height: 150px;
+                width: 150px;
+                border-radius: 50%;
+                border: 1px solid #eee;
+                display: inline-block;
+                padding: 5px;
+            }
+        }
+
+        .content {
+            margin-top: 20px;
+
+            h3 {
+                color: #777;
+                font-size: 16px;
+            }
+
+            h5 {
+                font-size: 13px;
+                margin-top: 5px;
+                color: #888;
+            }
+
+            .social {
+                margin-top: 20px;
+
+                li {
+                    display: inline-block;
+                    margin-right: 4px;
+
+                    &:last-child {
+                        margin: 0;
+                    }
+
+                    a {
+                        height: 35px;
+                        width: 35px;
+                        line-height: 32px;
+                        text-align: center;
+                        border: 1px solid #eee;
+                        color: #444;
+                        border-radius: 50%;
+                        font-size: 14px;
+
+                        &:hover {
+                            border-color: transparent;
+                            color: $white;
+                            background-color: $theme-color;
+                        }
+                    }
+                }
+            }
+        }
+    }
+}

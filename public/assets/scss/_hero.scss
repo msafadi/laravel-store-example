@@ -1,0 +1,303 @@
+/*======================================
+    Hero Area CSS
+========================================*/
+.hero-area {
+    position: relative;
+    background-color: $white;
+    margin-top: 12px;
+
+    @media #{$md} {
+        .md-custom-padding {
+            padding-right: 0 !important;
+        }
+    }
+
+    .custom-padding-right {
+        padding-right: 0;
+
+        @media #{$md} {
+            padding-right: calc(var(--bs-gutter-x)/ 2);
+        }
+
+        @media #{$xs} {
+            padding-right: calc(var(--bs-gutter-x)/ 2);
+        }
+
+    }
+
+    .slider-head {
+        position: relative;
+        overflow: hidden;
+
+        &:hover {
+            .tns-controls button:first-child {
+                left: 0;
+            }
+
+            .tns-controls button:last-child {
+                right: 0;
+            }
+        }
+    }
+
+    .tns-controls button {
+        width: 35px;
+        height: 60px;
+        cursor: pointer;
+        z-index: 2;
+        color: #fff;
+        font-size: 17px;
+        background: $theme-color;
+        border: none;
+        padding: 2px 5px;
+        border-radius: 4px;
+        -webkit-transition: all .3s ease-out 0s;
+        transition: all .3s ease-out 0s;
+        position: absolute;
+        z-index: 99;
+        top: 50%;
+        margin-top: -30px;
+        border-radius: 0;
+
+        &:hover {
+            background-color: $black;
+            color: $white;
+        }
+
+        &:first-child {
+            left: -40px;
+            border-radius: 0 4px 4px 0;
+        }
+
+        &:last-child {
+            right: -40px;
+            border-radius: 4px 0px 0px 4px;
+        }
+    }
+
+    .hero-slider {
+
+        .single-slider {
+            background-size: cover;
+            background-position: center;
+            background-repeat: no-repeat;
+            height: 500px;
+            position: relative;
+
+            @media #{$xs} {
+                position: relative;
+
+                &::before {
+                    position: absolute;
+                    left: 0;
+                    top: 0;
+                    content: "";
+                    height: 100%;
+                    width: 100%;
+                    background-color: $white;
+                    opacity: 0.5;
+                }
+            }
+
+            @media #{$md} {
+                height: 400px;
+                margin-bottom: 12px;
+            }
+
+            @media #{$xs} {
+                height: 350px;
+                margin-bottom: 12px;
+            }
+
+            .content {
+                padding: 20px 365px 20px 50px;
+                position: absolute;
+                left: 0;
+                top: 50%;
+                transform: translateY(-50%);
+
+                @media #{$md} {
+                    padding-right: 300px;
+                }
+
+                @media #{$xs} {
+                    padding-right: 30px;
+                    padding-left: 20px;
+                }
+
+                h2 {
+                    span {
+                        font-size: 17px;
+                        font-weight: 600;
+                        display: block;
+                        color: #8a8a8a;
+                        margin-bottom: 10px;
+
+                        @media #{$md} {
+                            font-size: 14px;
+                            font-weight: 500;
+                        }
+
+                        @media #{$xs} {
+                            font-size: 14px;
+                            font-weight: 500;
+                        }
+                    }
+
+                    font-size: 30px;
+                    font-weight: 800;
+                    color: $black;
+
+                    @media #{$md} {
+                        font-size: 22px;
+                    }
+
+                    @media #{$xs} {
+                        font-size: 20px;
+                    }
+                }
+
+                p {
+                    margin-top: 20px;
+
+                    @media #{$md} {
+                        margin-top: 10px;
+                    }
+
+                    @media #{$xs} {
+                        margin-top: 10px;
+                    }
+                }
+
+                h3 {
+                    margin-top: 20px;
+
+                    span {
+                        display: inline-block;
+                        margin-right: 12px;
+                        font-size: 16px;
+                        font-weight: 600;
+                        color: #8a8a8a;
+
+                        @media #{$md} {
+                            margin-right: 10px;
+                            font-size: 14px;
+                        }
+
+                        @media #{$xs} {
+                            margin-right: 8px;
+                            font-size: 14px;
+                        }
+                    }
+
+                    font-size: 25px;
+                    font-weight:800;
+                    color: $black;
+
+                    @media #{$md} {
+                        font-size: 20px;
+                    }
+
+                    @media #{$xs} {
+                        font-size: 20px;
+                    }
+                }
+
+                .button {
+                    margin-top: 30px;
+                }
+            }
+        }
+    }
+
+    .hero-small-banner {
+        height: 244px;
+        position: relative;
+        background-repeat: no-repeat;
+        background-size: contain;
+        background-size: cover;
+
+
+        @media #{$md} {
+            height: 240px;
+        }
+
+        @media #{$xs} {
+            height: 240px;
+        }
+
+        .content {
+            padding: 30px;
+            position: absolute;
+            left: 0;
+            top: 50%;
+            transform: translateY(-50%);
+
+            h2 {
+                font-size: 20px;
+                font-weight: 700;
+
+                span {
+                    font-size: 15px;
+                    font-weight: 500;
+                    color: #888;
+                    display: block;
+                    margin-bottom: 4px;
+                }
+            }
+
+            h3 {
+                color: $theme-color;
+                font-size: 20px;
+                font-weight: 800;
+                display: block;
+                margin-top: 7px;
+            }
+        }
+
+        &.style2 {
+            margin-top: 12px;
+            background-image: url('../images/hero/small-banner-bg.png');
+            background-color: $black;
+
+            @media #{$md} {
+                margin-top: 0;
+            }
+
+            @media #{$xs} {}
+
+            .content {
+                h2 {
+                    color: $white;
+
+                    span {
+                        color: $white;
+                    }
+                }
+
+                p {
+                    font-size: 15px;
+                    color: $white;
+                    font-weight: 600;
+                    margin-top: 15px;
+                }
+
+                .button {
+                    margin-top: 20px;
+
+                    .btn {
+                        background-color: $white;
+                        color: $theme-color;
+                        padding: 10px 25px;
+
+                        &:hover {
+                            background-color: $theme-color;
+                            color: $white;
+                        }
+                    }
+                }
+            }
+        }
+    }
+
+}

@@ -1,0 +1,461 @@
+/*======================================
+	Footer CSS
+========================================*/
+.footer {
+    background-color: $black;
+    position: relative;
+
+    .footer-top {
+
+        .inner-content {
+            padding: 60px 0;
+            border-bottom: 1px solid #ffffff26;
+
+
+            @media #{$md} {
+                padding: 50px 0;
+            }
+
+            @media #{$xs} {
+                padding: 40px 0;
+                text-align: center;
+            }
+        }
+
+        .footer-logo {
+            a {
+                img {
+                    width: 200px;
+
+                    @media #{$md} {
+                        width: 190px;
+                    }
+
+                    @media #{$xs} {
+                        width: 180px;
+                    }
+                }
+            }
+        }
+
+        .footer-newsletter {
+
+            @media #{$xs} {
+                padding: 0px 20px;
+            }
+
+            .title {
+                color: $white;
+                font-size: 20px;
+                font-weight: 800;
+                float: left;
+
+                @media #{$md} {
+                    margin-bottom: 20px;
+                    display: block;
+                }
+
+                @media #{$xs} {
+                    margin-bottom: 20px;
+                    display: block;
+                    font-size: 18px;
+                    width: 100%;
+                }
+
+                span {
+                    color: rgb(194, 194, 194);
+                    display: block;
+                    font-size: 14px;
+                    margin-top: 5px;
+                    font-weight: 400;
+
+                    @media #{$xs} {
+                        margin-top: 10px;
+                    }
+                }
+            }
+
+            .newsletter-form {
+                float: right;
+
+                @media #{$md} {
+                    float: none;
+                }
+
+                @media #{$xs} {
+                    float: none;
+                    margin-top: 20px;
+                }
+
+                input {
+                    height: 50px;
+                    background-color: rgba(255, 255, 255, 0.308);
+                    border-radius: 4px;
+                    width: 300px;
+                    display: inline-block;
+                    border: none;
+                    padding: 0px 20px;
+                    color: $white;
+
+                    @media #{$lg} {
+                        width: 240px;
+                    }
+
+                    @media #{$xs} {
+                        width: 100%;
+                        text-align: center;
+                    }
+
+                    &::placeholder {
+                        color: $white;
+                    }
+                }
+
+                .button {
+                    display: inline-block;
+                    margin-left: 6px;
+                    position: relative;
+                    top: -2px;
+
+                    @media #{$xs} {
+                        margin: 0;
+                        margin-top: 10px;
+                        top: 0;
+                        width: 100%;
+                    }
+
+                    .btn {
+                        height: 50px;
+
+                        @media #{$xs} {
+                            width: 100%;
+                        }
+
+                        &:hover {
+                            color: $black;
+                            background-color: $white;
+                        }
+                    }
+                }
+            }
+        }
+    }
+
+    .footer-middle {
+        padding-top: 40px;
+        padding-bottom: 80px;
+
+        @media #{$md} {
+            padding-top: 30px;
+            padding-bottom: 70px;
+        }
+
+        @media #{$xs} {
+            padding-top: 10px;
+            padding-bottom: 50px;
+        }
+
+        .newsletter-form {
+            input {
+                width: 100%;
+                border-radius: 4px;
+                padding: 0px 20px;
+                height: 50px;
+                border: 1px solid #eee;
+            }
+
+            .button {
+                margin-top: 12px;
+
+                .btn {
+                    background-color: $black;
+                    color: $white;
+
+                    &:hover {
+                        background-color: $theme-color;
+                        color: $white;
+                    }
+                }
+            }
+
+            p {
+                color: #888;
+                margin-top: 20px;
+            }
+        }
+
+    }
+
+    /* Single Footer */
+    .single-footer {
+        margin-top: 40px;
+
+        @media #{$xs} {
+            margin-top: 30px;
+            text-align: center;
+        }
+
+        h3 {
+            position: relative;
+            margin-bottom: 32px;
+            padding-bottom: 15px;
+            color: $white;
+            font-size: 17px;
+            font-weight: 600;
+            line-height: 24px;
+
+            &::before {
+                display: block;
+                position: absolute;
+                bottom: -2px;
+                left: 0;
+                width: 40px;
+                height: 3px;
+                background-color: $theme-color;
+                content: '';
+
+                @media #{$xs} {
+                    left: 50%;
+                    margin-left: -20px;
+                }
+            }
+        }
+
+        &.f-link {
+            ul {
+                li {
+                    display: block;
+                    margin-bottom: 12px;
+                    position: relative;
+
+                    &:last-child {
+                        margin-bottom: 0;
+                    }
+
+                    a {
+                        color: rgb(214, 214, 214);
+                        font-size: 14px;
+                        font-weight: 500;
+                        position: relative;
+
+                        &:hover {
+                            padding-left: 5px;
+                            color: $theme-color;
+                        }
+                    }
+                }
+            }
+        }
+
+        &.f-contact {
+            .phone {
+                color: rgb(214, 214, 214);
+            }
+
+            ul {
+                margin: 10px 0;
+
+                li {
+                    display: block;
+                    margin-bottom: 10px;
+
+                    span {
+                        display: block;
+                    }
+
+                    &:last-child {
+                        margin: 0;
+                    }
+
+                    color: rgb(214, 214, 214);
+
+                    span {
+                        color: rgb(214, 214, 214);
+                    }
+                }
+            }
+
+            .mail {
+                a {
+                    color: rgb(214, 214, 214);
+
+                    &:hover {
+                        color: $theme-color;
+                    }
+                }
+            }
+        }
+
+        &.our-app {
+            .app-btn {
+                li {
+
+                    display: block;
+                    margin-bottom: 15px;
+
+                    &:last-child {
+                        margin-bottom: 0;
+                    }
+
+                    span {
+                        display: block !important;
+                    }
+
+                    a {
+                        position: relative;
+                        padding-left: 40px;
+                        border-radius: 4px;
+                        padding: 15px 30px;
+                        padding-left: 60px;
+                        color: $white;
+                        transition: all 0.3s ease;
+                        background-color: #ffffff0f;
+
+                        i {
+                            font-size: 27px;
+                            position: absolute;
+                            left: 20px;
+                            top: 50%;
+                            transform: translateY(-50%);
+                            transition: all 0.3s ease;
+                        }
+
+                        .small-title {
+                            font-size: 13px;
+                            display: block;
+                            color: #fff;
+                            transition: all 0.3s ease;
+                        }
+
+                        .big-title {
+                            font-size: 14px;
+                            font-weight: 500;
+                            display: block;
+                            color: #fff;
+                            transition: all 0.3s ease;
+                        }
+
+                        &:hover {
+                            background-color: $theme-color;
+                            color: $white;
+                            border-color: transparent;
+
+                            .small-title {
+                                color: $white;
+                            }
+
+                            .big-title {
+                                color: $white;
+                            }
+                        }
+                    }
+                }
+            }
+        }
+    }
+
+    /* End Single Footer */
+
+    .footer-bottom {
+        .inner-content {
+            border-top: 1px solid #ffffff26;
+            padding: 25px 0;
+
+            @media #{$md,$xs} {
+                text-align: center;
+            }
+        }
+
+        .payment-gateway {
+            @media #{$md,$xs} {
+                margin-bottom: 12px;
+            }
+
+            span {
+                display: inline-block;
+                margin-right: 12px;
+                color: $white;
+
+                @media #{$xs} {
+                    display: block;
+                    margin: 0;
+                    margin-bottom: 10px;
+                }
+            }
+
+            img {
+                width: 200px;
+            }
+        }
+
+        .copyright {
+            text-align: center;
+
+            @media #{$md,$xs} {
+                margin-bottom: 12px;
+            }
+
+            p {
+                color: $white;
+
+                a {
+                    color: #eee;
+                    display: inline-block;
+                    margin-left: 4px;
+
+                    &:hover {
+                        color: $theme-color;
+                    }
+                }
+            }
+        }
+
+        .socila {
+            display: block;
+            float: right;
+
+            @media #{$md,$xs} {
+                float: none;
+                text-align: center;
+            }
+
+            li {
+                margin: 0;
+                margin-right: 5px;
+                display: inline-block;
+
+                &:last-child {
+                    margin: 0;
+                }
+
+                a {
+                    height: 35px;
+                    width: 35px;
+                    text-align: center;
+                    display: block;
+                    color: #fff;
+                    border-radius: 50%;
+                    line-height: 35px;
+                    font-size: 15px;
+
+                    &:hover {
+                        background-color: $theme-color;
+                        color: $white;
+                        border-color: transparent;
+                    }
+                }
+
+                span {
+                    display: inline-block;
+                    color: $white;
+                    margin-right: 12px;
+
+                    @media #{$xs} {
+                        display: none;
+                    }
+                }
+            }
+        }
+    }
+
+}

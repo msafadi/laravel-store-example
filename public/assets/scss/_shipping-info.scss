@@ -1,0 +1,61 @@
+/*======================================
+    Shipping Info CSS
+========================================*/
+.shipping-info {
+    background-color: $gray;
+    padding: 50px 0;
+
+    ul {
+        display: inline-block;
+        width: 100%;
+        margin-bottom: 0px;
+    }
+
+    li {
+        list-style: none;
+        float: left;
+        width: 25%;
+        padding: 30px 40px;
+        border: 1px solid #eee;
+        text-align: center;
+        transition: all 0.4s ease;
+
+        @media #{$md} {
+            width: 50%;
+        }
+
+        @media #{$xs} {
+            width: 100%;
+        }
+
+        &:hover {
+            background-color: $white;
+        }
+    }
+
+    .media-icon {
+        margin-bottom: 15px;
+
+        i {
+            color: $theme-color;
+            font-size: 38px;
+        }
+    }
+
+    .media-body {
+        padding-bottom: 0px;
+
+        h5 {
+            font-size: 15px;
+            margin: 0px;
+            font-weight: 600;
+            color: $black;
+        }
+
+        span {
+            font-size: 13px;
+            margin-top: 2px;
+            color: #777;
+        }
+    }
+}

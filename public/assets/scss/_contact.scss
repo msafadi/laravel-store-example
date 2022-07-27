@@ -1,0 +1,284 @@
+/*======================================
+	Contact CSS
+========================================*/
+.contact-us {
+    position: relative;
+    background-color: $white;
+
+    .contact-info {
+        .single-info-head {
+            margin-top: 30px;
+            background-color: $gray;
+            padding: 30px;
+            border: 1px solid #eee;
+            border-radius: 4px;
+
+            @media #{$xs} {
+                margin-top: 20px;
+            }
+        }
+
+        .single-info {
+            margin-bottom: 30px;
+            position: relative;
+            transition: all 0.3s ease;
+            text-align: left;
+
+            &:last-child {
+                margin-bottom: 0;
+            }
+
+            i {
+                font-size: 30px;
+                color: $theme-color;
+                transition: all 0.3s ease;
+                margin-bottom: 11px;
+            }
+
+            h3 {
+                font-size: 16px;
+                font-weight: 600;
+                color: $black;
+                margin-bottom: 10px;
+                transition: all 0.3s ease;
+            }
+
+            ul {
+                li {
+                    display: block;
+                    margin-bottom: 2px;
+                    transition: all 0.3s ease;
+                    font-weight: 500;
+
+                    &:last-child {
+                        margin: 0;
+                    }
+
+                    a {
+                        color: #888;
+                        font-weight: 500;
+                        transition: all 0.3s ease;
+
+                        &:hover {
+                            color: $theme-color;
+                        }
+                    }
+                }
+            }
+        }
+    }
+
+}
+
+/* Contact Form Head */
+.contact-form-head {
+    margin-top: 30px;
+
+    .contact-inner-title {
+        h2 {
+            font-size: 30px;
+            font-weight: 700;
+            display: block;
+            margin-bottom: 10px;
+            color: $white;
+
+            @media #{$md} {
+                font-size: 25px;
+                line-height: 32px;
+            }
+
+            @media #{$xs} {
+                font-size: 20px;
+                line-height: 30px;
+            }
+        }
+
+        p {
+            color: $white;
+        }
+
+        .question {
+            display: block;
+            min-height: 70px;
+            margin-top: 40px;
+
+            img {
+                height: 70px;
+                width: 70px;
+                border-radius: 70px;
+                float: left;
+                margin-right: 20px;
+            }
+
+            h4 {
+                font-size: 20px;
+                font-weight: 600;
+                padding-top: 15px;
+                color: $white;
+
+                span {
+                    font-size: 13px;
+                    font-weight: 500;
+                    display: block;
+                    margin-bottom: 5px;
+                }
+            }
+        }
+
+        .day-list {
+            display: block;
+            margin-top: 40px;
+
+            li {
+                color: $white;
+                font-weight: 500;
+                margin-bottom: 3px;
+                display: block;
+
+                &:last-child {
+                    margin: 0;
+                }
+            }
+        }
+
+        .call-back {
+            font-size: 15px;
+            font-weight: 500;
+            color: $white;
+            display: inline-block;
+            margin-top: 30px;
+            text-transform: capitalize;
+
+            i {
+                font-size: 15px;
+                display: inline-block;
+                margin-left: 5px;
+            }
+        }
+    }
+
+
+    .form-main {
+        padding: 40px;
+        background-color: $gray;
+        border: 1px solid #eee;
+        border-radius: 4px;
+
+
+        @media #{$md,$xs} {
+            padding: 35px;
+            margin-top: 40px;
+        }
+
+        @media #{$xs} {
+            padding: 30px;
+        }
+
+        .form-title {
+            margin-bottom: 30px;
+
+            h2 {
+                margin-bottom: 35px;
+                font-size: 22px;
+            }
+
+            p {
+                font-size: 16px;
+            }
+        }
+
+        .form {
+            .form-group {
+                margin-bottom: 15px;
+                display: block;
+
+                input {
+                    height: 52px;
+                    line-height: 52px;
+                    width: 100%;
+                    border: 1px solid #e6e2f5;
+                    padding: 0px 20px;
+                    color: #333;
+                    font-weight: 400;
+                    border-radius: 4px;
+                    background-color: $white;
+                    transition: all 0.4s ease;
+
+                    &:focus {
+                        border-color: $theme-color;
+                    }
+                }
+
+                textarea {
+                    height: 180px;
+                    width: 100%;
+                    border: 1px solid #e6e2f5;
+                    padding: 15px 20px;
+                    color: #333;
+                    resize: none;
+                    font-weight: 400;
+                    resize: vertical;
+                    border-radius: 4px;
+                    background-color: $white;
+                    transition: all 0.4s ease;
+
+                    &:focus {
+                        border-color: $theme-color;
+                    }
+                }
+
+                &.button {
+                    width: 100%;
+                    margin-bottom: 0;
+
+                    .btn {}
+                }
+            }
+
+        }
+    }
+}
+
+.map-section {
+    background-color: $gray;
+
+    .mapouter {
+        height: 500px;
+
+        .gmap_canvas {
+            height: 500px;
+
+            iframe {
+                height: 500px;
+            }
+        }
+    }
+
+    @media #{$md} {
+        .mapouter {
+            height: 400px;
+
+            .gmap_canvas {
+                height: 400px;
+
+                iframe {
+                    height: 400px;
+                }
+            }
+        }
+    }
+
+    @media #{$xs} {
+        .mapouter {
+            height: 300px;
+
+            .gmap_canvas {
+                height: 300px;
+
+                iframe {
+                    height: 300px;
+                }
+            }
+        }
+    }
+}

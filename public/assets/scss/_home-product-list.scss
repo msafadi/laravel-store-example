@@ -1,0 +1,80 @@
+/*======================================
+    Home Product List CSS
+========================================*/
+.home-product-list {
+    @media #{$xs} {
+        .custom-responsive-margin {
+            margin-bottom: 40px;
+        }
+    }
+
+    .list-title {
+        position: relative;
+        margin-bottom: 24px;
+        padding-bottom: 12px;
+        border-bottom: 1px solid #e5e5e5;
+        color: #232323;
+        font-size: 15px;
+        font-weight: 500;
+
+        &::before {
+            display: block;
+            position: absolute;
+            bottom: -1px;
+            left: 0;
+            width: 90px;
+            height: 1px;
+            background-color: $theme-color;
+            content: '';
+        }
+    }
+
+    .single-list {
+        margin-bottom: 20px;
+
+        &:last-child {
+            margin: 0;
+        }
+
+        .list-image {
+            width: 60px;
+            padding-right: 12px;
+            float: left;
+            position: relative;
+            top: 10px;
+
+            a {
+                display: block;
+                border-radius: 5px;
+                overflow: hidden;
+
+                img {
+                    width: 100%;
+                }
+            }
+        }
+
+        .list-info {
+            display: table-cell;
+            vertical-align: top;
+
+            h3 {
+                a {
+                    font-size: 14px;
+                    font-weight: 500;
+                    color: $black;
+
+                    &:hover {
+                        color: $theme-color;
+                    }
+                }
+            }
+
+            span {
+                display: block;
+                margin-top: 2px;
+                font-size: 13px;
+            }
+        }
+    }
+}

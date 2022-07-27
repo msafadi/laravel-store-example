@@ -1,0 +1,411 @@
+/*======================================
+   Checkout CSS
+========================================*/
+.checkout-wrapper {
+    background-color: $gray;
+}
+
+.checkout-steps-form-style-1 {
+
+    #accordionExample {
+        li {
+            margin-bottom: 20px;
+
+            &:last-child {
+                margin: 0;
+            }
+        }
+    }
+
+    .title {
+        font-size: 15px;
+        font-weight: 600;
+        line-height: 40px;
+        position: relative;
+        cursor: pointer;
+        border: 1px solid rgb(230, 230, 230);
+        border-radius: 4px 4px 0 0;
+        padding: 8px 25px;
+        color: $theme-color;
+        background-color: $white;
+
+        &.collapsed {
+            border-radius: 4px;
+            color: $black
+        }
+
+        &:before {
+            position: absolute;
+            top: 50%;
+            right: 16px;
+            transform: translateY(-50%);
+            font-family: "Lineicons";
+            content: "\ea5e";
+            font-size: 13px;
+            color: #7D7D7D;
+            transition: all 0.3s linear;
+        }
+    }
+
+    .checkout-steps-form-content {
+        padding: 25px;
+        padding-top: 0;
+        border: 1px solid rgb(230, 230, 230);
+        border-top-color: transparent;
+        background-color: $white;
+        border-radius: 0 0 4px 4px;
+    }
+
+    .single-form {
+        margin-top: 16px;
+        position: relative;
+
+        .form-input {
+            position: relative;
+
+            @media #{$xs} {
+                margin-bottom: 16px;
+
+                &:last-child {
+                    margin-bottom: 0;
+                }
+            }
+
+            textarea,
+            input {
+                width: 100%;
+                height: 46px;
+                padding: 0 20px;
+                border-radius: 4px;
+                transition: all 0.3s linear;
+                border: 1px solid rgb(230, 230, 230);
+
+                &:focus {
+                    border-color: $theme-color;
+                }
+            }
+        }
+    }
+
+    .form-default label {
+        color: #888;
+        margin-bottom: 8px;
+    }
+
+    .select-items {
+        select.form-control:not([size]):not([multiple]) {
+            height: 46px;
+            border: 1px solid rgb(219, 219, 219);
+            border-radius: 4px;
+            width: 100%;
+
+            &:focus {
+                text-decoration: none;
+                outline: none;
+                box-shadow: none;
+            }
+        }
+
+        select.form-control {
+            padding-right: 38px;
+            padding-left: 20px;
+            background-position: center right 17px;
+            background-image: url(data:image/svg+xml;utf8;base64,PD94bWwgdmVyc2lvbj0iMS4wIiBlbmNvZGluZz0iaXNvLTg4NTktMSI/Pgo8IS0tIEdlbmVyYXRvcjogQWRvYmUgSWxsdXN0cmF0b3IgMTguMS4xLCBTVkcgRXhwb3J0IFBsdWctSW4gLiBTVkcgVmVyc2lvbjogNi4wMCBCdWlsZCAwKSAgLS0+CjxzdmcgeG1sbnM9Imh0dHA6Ly93d3cudzMub3JnLzIwMDAvc3ZnIiB4bWxuczp4bGluaz0iaHR0cDovL3d3dy53My5vcmcvMTk5OS94bGluayIgdmVyc2lvbj0iMS4xIiBpZD0iQ2FwYV8xIiB4PSIwcHgiIHk9IjBweCIgdmlld0JveD0iMCAwIDE4NS4zNDQgMTg1LjM0NCIgc3R5bGU9ImVuYWJsZS1iYWNrZ3JvdW5kOm5ldyAwIDAgMTg1LjM0NCAxODUuMzQ0OyIgeG1sOnNwYWNlPSJwcmVzZXJ2ZSIgd2lkdGg9IjI0cHgiIGhlaWdodD0iMjRweCI+CjxnPgoJPGc+CgkJPHBhdGggZD0iTTkyLjY3MiwxNDQuMzczYy0yLjc1MiwwLTUuNDkzLTEuMDQ0LTcuNTkzLTMuMTM4TDMuMTQ1LDU5LjMwMWMtNC4xOTQtNC4xOTktNC4xOTQtMTAuOTkyLDAtMTUuMTggICAgYzQuMTk0LTQuMTk5LDEwLjk4Ny00LjE5OSwxNS4xOCwwbDc0LjM0Nyw3NC4zNDFsNzQuMzQ3LTc0LjM0MWM0LjE5NC00LjE5OSwxMC45ODctNC4xOTksMTUuMTgsMCAgICBjNC4xOTQsNC4xOTQsNC4xOTQsMTAuOTgxLDAsMTUuMThsLTgxLjkzOSw4MS45MzRDOTguMTY2LDE0My4zMjksOTUuNDE5LDE0NC4zNzMsOTIuNjcyLDE0NC4zNzN6IiBmaWxsPSIjNTA1MDUwIi8+Cgk8L2c+CjwvZz4KPGc+CjwvZz4KPGc+CjwvZz4KPGc+CjwvZz4KPGc+CjwvZz4KPGc+CjwvZz4KPGc+CjwvZz4KPGc+CjwvZz4KPGc+CjwvZz4KPGc+CjwvZz4KPGc+CjwvZz4KPGc+CjwvZz4KPGc+CjwvZz4KPGc+CjwvZz4KPGc+CjwvZz4KPGc+CjwvZz4KPC9zdmc+Cg==);
+            background-repeat: no-repeat;
+            background-size: 10px 10px;
+        }
+    }
+
+    .single-checkbox {
+        margin-top: 15px;
+
+        label {
+            font-size: 16px;
+            margin-bottom: 0;
+            position: relative;
+            bottom: -2px;
+        }
+
+        input[type="checkbox"] {
+            display: none;
+        }
+
+        input[type="checkbox"]+label span {
+            border-color: $theme-color;
+            width: 20px;
+            height: 20px;
+            border-radius: 4px;
+            cursor: pointer;
+            position: relative;
+            display: inline-block;
+            margin: 0 5px -3px 0;
+            border: 1px solid #d5d5d5;
+
+            &::before {
+                position: absolute;
+                content: '';
+                top: 0;
+                left: 0;
+                width: 100%;
+                height: 100%;
+                transition: all 0.4s ease;
+                transform: scale(0);
+                font-size: 10px;
+                line-height: 1.2;
+                background-color: $theme-color;
+                font-family: "Lineicons";
+                content: "\ea5b";
+                padding-left: 4px;
+                padding-top: 3px;
+                border-radius: 4px;
+            }
+        }
+
+        .single-checkbox input[type="checkbox"]+label span {
+            width: 20px;
+            height: 20px;
+            border: 1px solid rgb(228, 228, 228);
+            border-radius: 4px;
+            cursor: pointer;
+            position: relative;
+            display: inline-block;
+            margin: 0 5px -3px 0;
+        }
+
+        input[type="checkbox"]:checked+label span {
+            border-color: transparent;
+        }
+
+        input[type="checkbox"]:checked+label span::before {
+            transform: scale(1);
+            border-radius: 4px;
+            color: $white;
+        }
+
+        p {
+            display: inline;
+            color: #777;
+            padding-left: 5px;
+        }
+    }
+
+    .checkout-payment-option {
+        margin-top: 16px;
+    }
+
+    .heading-6 {
+        font-size: 14px;
+        line-height: 18px;
+        color: #666;
+    }
+
+    .payment-option-wrapper {
+        display: -moz-flex;
+        display: -ms-flex;
+        display: -o-flex;
+        display: flex;
+        flex-wrap: wrap;
+        margin-left: -4px;
+        margin-right: -4px;
+    }
+
+    .single-payment-option {
+        width: 25%;
+        margin-top: 16px;
+        padding: 0 4px;
+
+        @media #{$xs} {
+            width: 100%;
+        }
+
+        label {
+            text-align: center;
+            padding: 12px;
+            border-radius: 5px;
+            -webkit-border-radius: 5px;
+            -moz-border-radius: 5px;
+            -ms-border-radius: 5px;
+            -o-border-radius: 5px;
+            margin-bottom: 0;
+            width: 100%;
+            transition: all 0.3s linear;
+            cursor: pointer;
+            border: 1px solid #eee;
+        }
+
+        input[type="radio"] {
+            display: none;
+        }
+
+        input[type="radio"]:checked+label {
+            border-color: $theme-color;
+            background-color: $white;
+        }
+
+        p {
+            font-size: 14px;
+            font-weight: 400;
+            color: #444;
+        }
+
+        span {
+            display: block;
+        }
+
+        .price {
+            font-weight: 500;
+            font-size: 15px;
+            line-height: 22px;
+            color: #444;
+            margin-top: 4px;
+        }
+    }
+
+    .steps-form-btn {
+        margin-top: 30px;
+
+        .btn {
+
+            @media #{$xs} {
+
+                width: 100%;
+                margin: 0;
+                margin-bottom: 10px;
+
+                &:last-child {
+                    margin-bottom: 0;
+                }
+            }
+        }
+    }
+
+    .checkout-payment-form {
+        .single-form .form-input img {
+            position: absolute;
+            top: 50%;
+            right: 10px;
+            transform: translateY(-50%);
+        }
+
+        .payment-card-info {
+            .single-form {
+                display: inline-block;
+
+                .form-input {
+                    width: 145px;
+                }
+
+                &.mm-yy {
+
+                    .form-input {
+                        margin-right: 15px;
+                    }
+                }
+            }
+        }
+    }
+}
+
+.checkout-sidebar-coupon {
+    background-color: $white;
+    padding: 25px;
+    border: 1px solid rgb(230, 230, 230);
+    border-radius: 4px;
+
+    @media #{$md,$xs} {
+        margin-top: 30px;
+    }
+
+    .single-form {
+        position: relative;
+
+        .button {
+            position: absolute;
+            right: 0;
+            top: 0;
+
+            .btn {
+                height: 46px;
+            }
+        }
+    }
+
+    p {
+        font-size: 14px;
+        line-height: 20px;
+        color: #888;
+        margin-bottom: 12px;
+    }
+
+    input {
+        width: 100%;
+        height: 46px;
+        padding: 0 20px;
+        border-radius: 4px;
+        transition: all 0.3s linear;
+        border: 1px solid rgb(230, 230, 230);
+        border-radius: 4px;
+        padding-right: 120px;
+    }
+
+}
+
+.checkout-sidebar-price-table {
+    background-color: $white;
+    padding: 25px;
+    border: 1px solid rgb(230, 230, 230);
+    border-radius: 4px;
+
+
+    .sub-total-price .total-price {
+        display: -moz-flex;
+        display: -ms-flex;
+        display: -o-flex;
+        display: flex;
+        justify-content: space-between;
+        padding: 4px 0;
+    }
+
+    .price-table-btn {
+        margin-top: 20px;
+    }
+}
+
+.checkout-sidebar-price-table .title {
+    font-weight: 400;
+    font-size: 15px;
+    line-height: 22px;
+    color: $black;
+    padding-bottom: 12px;
+    margin-bottom: 10px;
+    border-bottom: 1px solid rgb(230, 230, 230);
+}
+
+.checkout-sidebar-price-table .total-payable {
+    padding: 8px 0;
+    padding: 10px 0;
+    border-top: 1px solid #e6e6e6;
+    margin-top: 10px;
+
+    .payable-price {
+        display: -moz-flex;
+        display: -ms-flex;
+        display: -o-flex;
+        display: flex;
+        justify-content: space-between;
+    }
+}
+
+.checkout-sidebar-banner {
+    border: 1px solid rgb(230, 230, 230);
+    border-radius: 4px;
+    overflow: hidden;
+
+    a {
+        width: 100%;
+
+        img {
+            width: 100%;
+        }
+    }
+}

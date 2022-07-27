@@ -1,0 +1,45 @@
+/*======================================
+   Brands CSS
+========================================*/
+
+.brands {
+    padding: 80px 0;
+    background-color: $gray;
+
+    #tns2>.tns-item {
+        padding-right: 28px;
+    }
+
+    .title {
+        text-align: center;
+        font-size: 20px;
+        font-weight: 500;
+        margin-bottom: 30px;
+    }
+
+    @media #{$md, $xs} {
+        padding: 40px 0;
+    }
+}
+
+.brands .brands-logo-wrapper {
+    border: 1px solid #eee;
+}
+
+.brands .brands-logo-wrapper .brands-logo-carousel .brand-logo {
+    padding: 20px 20px;
+    text-align: center;
+    margin: 0;
+    border-right: 1px solid #eee;
+}
+
+.brands .brands-logo-wrapper .brands-logo-carousel .brand-logo img {
+    width: 100px;
+    opacity: .8;
+    -webkit-transition: all .3s ease-out 0s;
+    transition: all .3s ease-out 0s;
+}
+
+.brands .brands-logo-wrapper .brands-logo-carousel .brand-logo img:hover {
+    opacity: 1;
+}

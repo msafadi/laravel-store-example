@@ -1,0 +1,145 @@
+/*======================================
+    Faq CSS
+========================================*/
+.faq {
+    padding-bottom: 80px;
+    background-color: $gray;
+
+    .section-title {
+        margin-bottom: 60px;
+
+        @media #{$md} {
+            margin-bottom: 40px;
+        }
+
+        @media #{$xs} {
+            margin-bottom: 30px;
+        }
+    }
+
+    @media #{$md} {
+        padding-bottom: 40px;
+    }
+
+    @media #{$xs} {
+        padding-bottom: 30px;
+    }
+}
+
+.accordion-item:first-of-type .accordion-button {
+    border-top-left-radius: 4px;
+    border-top-right-radius: 4px;
+    padding-right: 40px;
+}
+
+.accordion-item:last-of-type .accordion-button.collapsed {
+    border-bottom-right-radius: 4px;
+    border-bottom-left-radius: 4px;
+}
+
+.accordion-item .accordion-button {
+    border-radius: 4px;
+    font-size: 17px;
+    font-weight: 500;
+    width: 100%;
+    display: block;
+    overflow: hidden;
+    border: none;
+    padding: 15px 25px;
+    padding-right: 40px;
+    background-color: $white;
+
+    @media #{$md} {
+        padding: 18px 20px;
+        padding-right: 40px;
+
+    }
+
+    @media #{$xs} {
+        padding: 15px 20px;
+        padding-right: 40px;
+
+    }
+
+    .title {
+        font-size: 14px;
+        position: relative;
+        font-weight: 600;
+        float: left;
+        line-height: 25px;
+
+        @media #{$md} {
+            font-size: 14px;
+        }
+
+        @media #{$xs} {
+            font-size: 14px;
+        }
+    }
+
+    i {
+        font-size: 15px;
+        transition: all 0.3s ease;
+        position: relative;
+        top: 0;
+        position: absolute;
+        top: 50%;
+        transform: translateY(-50%);
+        right: 20px;
+    }
+}
+
+.accordion-button:not(.collapsed) {
+    color: $white;
+    background-color: $theme-color;
+    border-radius: 4px 4px 0 0;
+
+    i {
+        &::before {
+            content: "\eb2e";
+            font-family: lineIcons;
+        }
+    }
+}
+
+.accordion-button::after {
+    display: none;
+}
+
+.accordion-collapse {
+    border: none;
+}
+
+.accordion-body {
+    border-radius: 0 0 4px 4px;
+    padding: 25px;
+    background-color: $white;
+
+    @media #{$md} {
+        padding: 30px;
+    }
+
+    @media #{$xs} {
+        padding: 20px;
+    }
+
+    p {
+        margin: 0;
+        margin-bottom: 20px;
+        color: #777;
+
+        &:last-child {
+            margin: 0;
+        }
+    }
+}
+
+.accordion-item {
+    margin-bottom: 20px;
+    box-shadow: 0px 0px 20px #00000007;
+    border-radius: 4px;
+
+    &:last-child {
+        margin: 0;
+    }
+}

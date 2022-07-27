@@ -1,0 +1,36 @@
+/*======================================
+    Variables
+========================================*/
+// Font Family
+$font: 'Manrope',
+sans-serif;
+
+// Colors ---------------
+$white: #fff;
+$black: #081828;
+$gray: #f9f9f9;
+
+
+// Theme Color
+$theme-color: #0167F3;
+
+$border-color: #F4EEFB;
+
+//Body Color
+$body-color: #888;
+
+
+// Heading Color
+$heading-color: #081828;
+
+//Border Radius
+$borderRadius:10px;
+
+
+// Responsive Variables
+$desktop: 'only screen and (min-width: 1400px)';
+$laptop: 'only screen and (min-width: 1200px) and (max-width: 1399px)';
+$lg : 'only screen and (min-width: 992px) and (max-width: 1199px)';
+$md:'only screen and (min-width: 768px) and (max-width: 991px)';
+$xs:'(max-width: 767px)';
+$sm: 'only screen and (min-width: 480px) and (max-width: 767px)';

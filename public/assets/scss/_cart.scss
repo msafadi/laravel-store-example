@@ -1,0 +1,269 @@
+/*======================================
+   Start Shopping Cart CSS
+========================================*/
+.cart-list-head {
+    border-radius: 4px;
+    overflow: hidden;
+    border: 1px solid #eee;
+}
+
+.cart-list-title {
+    background-color: $white;
+    padding: 18px 20px;
+    border-bottom: 1px solid #eee;
+
+    @media #{$xs} {
+        text-align: center;
+    }
+}
+
+.cart-list-title p {
+    color: $black;
+    font-weight: 500;
+    font-size: 14px;
+
+    @media #{$xs} {
+        padding: 2px 0;
+    }
+}
+
+.cart-single-list {
+    @media #{$xs} {
+        text-align: center;
+    }
+
+    a {
+        img {
+            @media #{$xs} {
+                width: 50%;
+                margin-bottom: 10px;
+            }
+        }
+    }
+
+    .remove-item {
+        color: #fff;
+        background-color: #f44336;
+        font-size: 8px;
+        height: 20px;
+        width: 20px;
+        line-height: 20px;
+        border-radius: 50%;
+        text-align: center;
+
+        @media #{$xs} {
+            margin-top: 5px;
+        }
+
+        &:hover {
+            color: $white;
+            background-color: $black;
+        }
+    }
+}
+
+
+.cart-single-list .product-name {
+    line-height: 22px;
+}
+
+.cart-single-list .product-name a {
+    font-size: 14px;
+    color: #333;
+    font-weight: 500;
+}
+
+.cart-single-list .product-des {
+    display: block;
+
+    span {
+        font-size: 13px;
+        font-weight: 500;
+        display: block;
+
+        em {
+            font-style: normal;
+            color: #555;
+        }
+    }
+}
+
+.cart-single-list {
+    padding: 30px 20px;
+    background-color: #fff;
+    border-bottom: 1px solid #eee;
+}
+
+.cart-single-list:last-child {
+    border: none !important;
+    border-radius: 0 0 4px 4px;
+}
+
+.cart-single-list a:hover {
+    color: $theme-color;
+}
+
+.shopping-cart {
+    background-color: $gray;
+}
+
+
+.shopping-cart .total-amount .right ul li {
+    font-size: 14px;
+    font-weight: 500;
+    color: $black;
+    margin-bottom: 12px;
+}
+
+.shopping-cart .total-amount .right ul li span {
+    display: inline-block;
+    float: right;
+}
+
+.shopping-cart .total-amount .coupon {
+    padding: 40px;
+    border: 1px solid #eee;
+    background-color: #fff;
+    border-radius: 4px;
+    margin-top: 40px;
+    display: inline-block;
+
+    @media #{$xs} {
+        width: 100%;
+        padding: 30px;
+        margin-top: 30px;
+    }
+}
+
+.shopping-cart .total-amount .coupon input {
+    width: 300px;
+    height: 46px;
+    border: 1px solid rgb(221, 221, 221);
+    overflow: hidden;
+    border-radius: 4px;
+    color: #333;
+    padding: 0px 20px;
+    display: inline-block;
+
+    @media #{$xs} {
+        width: 100%;
+    }
+}
+
+.shopping-cart .total-amount .coupon .button {
+    display: inline-block;
+
+    @media #{$xs} {
+        display: block;
+    }
+}
+
+.shopping-cart .total-amount .coupon button {
+    border: none;
+    height: 46px;
+    display: inline-block;
+    margin-left: 8px;
+    position: relative;
+    top: -2px;
+
+    @media #{$xs} {
+        margin: 0;
+        margin-top: 10px;
+        width: 100%;
+    }
+}
+
+.shopping-cart .total-amount .right {
+    padding: 40px;
+    border: 1px solid #eee;
+    background-color: #fff;
+    border-radius: 4px;
+    margin-top: 40px;
+
+    @media #{$xs} {
+        padding: 30px;
+        margin-top: 30px;
+    }
+}
+
+.shopping-cart .total-amount .right .button {
+    margin-top: 30px;
+}
+
+.shopping-cart .total-amount .right .btn {
+    width: 100%;
+    margin-bottom: 8px;
+    text-align: center;
+    padding: 12px 20px
+}
+
+.shopping-cart .total-amount .right .btn:last-child {
+    margin: 0;
+}
+
+
+.shopping-cart {
+    .count-input {
+        @media #{$xs} {
+            padding: 10px 65px;
+        }
+    }
+
+    p {
+        @media #{$xs} {
+            padding: 3px 0;
+        }
+    }
+
+    select.form-control:not([size]):not([multiple]) {
+        height: 46px;
+        border: 1px solid rgb(219, 219, 219);
+        border-radius: 4px;
+        width: 120px;
+
+        @media #{$md} {
+            width: 100%;
+        }
+
+        @media #{$xs} {
+            width: 100%;
+        }
+
+        &:focus {
+            text-decoration: none;
+            outline: none;
+            box-shadow: none;
+        }
+    }
+
+    select.form-control {
+        padding-right: 38px;
+        background-position: center right 17px;
+        background-image: url(data:image/svg+xml;utf8;base64,PD94bWwgdmVyc2lvbj0iMS4wIiBlbmNvZGluZz0iaXNvLTg4NTktMSI/Pgo8IS0tIEdlbmVyYXRvcjogQWRvYmUgSWxsdXN0cmF0b3IgMTguMS4xLCBTVkcgRXhwb3J0IFBsdWctSW4gLiBTVkcgVmVyc2lvbjogNi4wMCBCdWlsZCAwKSAgLS0+CjxzdmcgeG1sbnM9Imh0dHA6Ly93d3cudzMub3JnLzIwMDAvc3ZnIiB4bWxuczp4bGluaz0iaHR0cDovL3d3dy53My5vcmcvMTk5OS94bGluayIgdmVyc2lvbj0iMS4xIiBpZD0iQ2FwYV8xIiB4PSIwcHgiIHk9IjBweCIgdmlld0JveD0iMCAwIDE4NS4zNDQgMTg1LjM0NCIgc3R5bGU9ImVuYWJsZS1iYWNrZ3JvdW5kOm5ldyAwIDAgMTg1LjM0NCAxODUuMzQ0OyIgeG1sOnNwYWNlPSJwcmVzZXJ2ZSIgd2lkdGg9IjI0cHgiIGhlaWdodD0iMjRweCI+CjxnPgoJPGc+CgkJPHBhdGggZD0iTTkyLjY3MiwxNDQuMzczYy0yLjc1MiwwLTUuNDkzLTEuMDQ0LTcuNTkzLTMuMTM4TDMuMTQ1LDU5LjMwMWMtNC4xOTQtNC4xOTktNC4xOTQtMTAuOTkyLDAtMTUuMTggICAgYzQuMTk0LTQuMTk5LDEwLjk4Ny00LjE5OSwxNS4xOCwwbDc0LjM0Nyw3NC4zNDFsNzQuMzQ3LTc0LjM0MWM0LjE5NC00LjE5OSwxMC45ODctNC4xOTksMTUuMTgsMCAgICBjNC4xOTQsNC4xOTQsNC4xOTQsMTAuOTgxLDAsMTUuMThsLTgxLjkzOSw4MS45MzRDOTguMTY2LDE0My4zMjksOTUuNDE5LDE0NC4zNzMsOTIuNjcyLDE0NC4zNzN6IiBmaWxsPSIjNTA1MDUwIi8+Cgk8L2c+CjwvZz4KPGc+CjwvZz4KPGc+CjwvZz4KPGc+CjwvZz4KPGc+CjwvZz4KPGc+CjwvZz4KPGc+CjwvZz4KPGc+CjwvZz4KPGc+CjwvZz4KPGc+CjwvZz4KPGc+CjwvZz4KPGc+CjwvZz4KPGc+CjwvZz4KPGc+CjwvZz4KPGc+CjwvZz4KPGc+CjwvZz4KPC9zdmc+Cg==);
+        background-repeat: no-repeat;
+        background-size: 10px 10px;
+    }
+
+    .form-control {
+        padding: 0 18px;
+        transition: color .25s, background-color .25s, border-color .25s;
+        border: 1px solid #e0e0e0;
+        border-radius: 4px;
+        background-color: #fff;
+        color: #505050;
+        font-size: 14px;
+        -webkit-appearance: none;
+        -moz-appearance: none;
+        appearance: none;
+
+        &:focus {
+            text-decoration: none;
+            outline: none;
+            box-shadow: none;
+        }
+    }
+}
+
+/*======================================
+   End Shopping Cart CSS
+========================================*/
