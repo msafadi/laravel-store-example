@@ -1,0 +1,1 @@
+(()=>{var t;(t=jQuery)(".item-quantity").on("change",(function(a){t.ajax({url:"/cart/"+t(this).data("id"),method:"put",data:{quantity:t(this).val(),_token:csrf_token}})})),t(".remove-item").on("click",(function(a){var e=t(this).data("id");t.ajax({url:"/cart/"+e,method:"delete",data:{_token:csrf_token},success:function(a){t("#".concat(e)).remove()}})}))})();
