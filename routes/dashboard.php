@@ -7,9 +7,9 @@ use App\Http\Controllers\Dashboard\ProfileController;
 use Illuminate\Support\Facades\Route;
 
 Route::group([
-    'middleware' => ['auth', 'auth.type:super-admin,admin'],
+    'middleware' => ['auth:admin'],
     'as' => 'dashboard.',
-    'prefix' => 'dashboard',
+    'prefix' => 'admin/dashboard',
     //'namespace' => 'App\Http\Controllers\Dashboard',
 ], function () {
 

@@ -23,12 +23,5 @@ class UserSeeder extends Seeder
             'password' => Hash::make('password'),
             'phone_number' => '970591234567',
         ]);
-
-        DB::table('users')->insert([
-            'name' => 'System Admin',
-            'email' => 'sys@safadi.ps',
-            'password' => Hash::make('password'),
-            'phone_number' => '970591234568',
-        ]);
     }
 }
