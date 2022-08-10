@@ -18,5 +18,9 @@
         "lodash": "^4.17.19",
         "postcss": "^8.4.6",
         "tailwindcss": "^3.1.0"
+    },
+    "dependencies": {
+        "laravel-echo": "^1.13.1",
+        "pusher-js": "^7.3.0"
     }
 }
