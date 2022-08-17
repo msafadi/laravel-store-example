@@ -19,6 +19,8 @@ class ProductsController extends Controller
      */
     public function index()
     {
+        $this->authorize('view-any', Product::class);
+
         $products = Product::with(['category', 'store'])->paginate();
         // SELECT * FROM products
         // SELECT * FROM categories WHERE id IN (..)
@@ -34,7 +36,7 @@ class ProductsController extends Controller
      */
     public function create()
     {
-        //
+        $this->authorize('create', Product::class);
     }
 
     /**
@@ -45,7 +47,7 @@ class ProductsController extends Controller
      */
     public function store(Request $request)
     {
-        //
+        $this->authorize('create', Product::class);
     }
 
     /**
@@ -56,7 +58,8 @@ class ProductsController extends Controller
      */
     public function show($id)
     {
-        //
+        $product = Product::findOrFail($id);
+        $this->authorize('view', $product);
     }
 
     /**
@@ -68,6 +71,7 @@ class ProductsController extends Controller
     public function edit($id)
     {
         $product = Product::findOrFail($id);
+        $this->authorize('update', $product);
 
         $tags = implode(',', $product->tags()->pluck('name')->toArray());
 
@@ -83,6 +87,8 @@ class ProductsController extends Controller
      */
     public function update(Request $request, Product $product)
     {
+        $this->authorize('update', $product);
+
         $product->update( $request->except('tags') );
 
 
@@ -117,6 +123,7 @@ class ProductsController extends Controller
      */
     public function destroy($id)
     {
-        //
+        $product = Product::findOrFail($id);
+        $this->authorize('delete', $product);
     }
 }

@@ -1,13 +1,16 @@
 <?php
 
+use App\Http\Controllers\Dashboard\AdminsController;
 use App\Http\Controllers\Dashboard\CategoriesController;
 use App\Http\Controllers\Dashboard\DashboardController;
 use App\Http\Controllers\Dashboard\ProductsController;
 use App\Http\Controllers\Dashboard\ProfileController;
+use App\Http\Controllers\Dashboard\RolesController;
+use App\Http\Controllers\Dashboard\UsersController;
 use Illuminate\Support\Facades\Route;
 
 Route::group([
-    'middleware' => ['auth:admin'],
+    'middleware' => ['auth:admin,web'],
     'as' => 'dashboard.',
     'prefix' => 'admin/dashboard',
     //'namespace' => 'App\Http\Controllers\Dashboard',
@@ -32,8 +35,15 @@ Route::group([
     Route::delete('categories/{category}/force-delete', [CategoriesController::class, 'forceDelete'])
         ->name('categories.force-delete');
     
-    Route::resource('/categories', CategoriesController::class);
-    Route::resource('/products', ProductsController::class);
+    //Route::resource('/categories', CategoriesController::class);
+    //Route::resource('/products', ProductsController::class);
+    Route::resources([
+        'products' => ProductsController::class,
+        'categories' => CategoriesController::class,
+        'roles' => RolesController::class,
+        'users' => UsersController::class,
+        'admins' => AdminsController::class,
+    ]);
 });
 
 // Route::middleware('auth')->as('dashboard.')->prefix('dashboard')->group(function() {
