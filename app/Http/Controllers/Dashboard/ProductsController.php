@@ -3,6 +3,7 @@
 namespace App\Http\Controllers\Dashboard;
 
 use App\Http\Controllers\Controller;
+use App\Jobs\ImportProducts;
 use App\Models\Category;
 use App\Models\Product;
 use App\Models\Tag;
@@ -126,4 +127,5 @@ class ProductsController extends Controller
         $product = Product::findOrFail($id);
         $this->authorize('delete', $product);
     }
+
 }

@@ -2,6 +2,8 @@
     <!-- Start Hero Area -->
     <section class="hero-area">
         <div class="container">
+            <x-alert type="info" />
+            
             <div class="row">
                 <div class="col-lg-8 col-12 custom-padding-right">
                     <div class="slider-head">

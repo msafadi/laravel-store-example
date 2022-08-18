@@ -36,11 +36,11 @@ class AuthServiceProvider extends ServiceProvider
     {
         $this->registerPolicies();
 
-        // Gate::before(function ($user, $ability) {
-        //     if ($user->super_admin) {
-        //         return true;
-        //     }
-        // });
+        Gate::before(function ($user, $ability) {
+            if ($user->super_admin) {
+                return true;
+            }
+        });
 
         foreach ($this->app->make('abilities') as $code => $lable) {
             Gate::define($code, function($user) use ($code) {
