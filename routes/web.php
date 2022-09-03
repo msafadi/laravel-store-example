@@ -1,5 +1,6 @@
 <?php
 
+use App\Http\Controllers\Auth\SocialLoginController;
 use App\Http\Controllers\DashboardController;
 use App\Http\Controllers\Front\Auth\TwoFactorAuthentcationController;
 use App\Http\Controllers\Front\CartController;
@@ -8,6 +9,8 @@ use App\Http\Controllers\Front\CurrencyConverterController;
 use App\Http\Controllers\Front\HomeController;
 use App\Http\Controllers\Front\PaymentsController;
 use App\Http\Controllers\Front\ProductsController;
+use App\Http\Controllers\SocialController;
+use App\Http\Controllers\StripeWebhooksController;
 use Illuminate\Support\Facades\Route;
 
 use Mcamara\LaravelLocalization\Facades\LaravelLocalization;
@@ -52,11 +55,26 @@ Route::group([
         ->name('checkout.payment');
 });
 
+Route::get('auth/{provider}/redirect', [SocialLoginController::class, 'redirect'])
+    ->name('auth.socilaite.redirect');
+Route::get('auth/{provider}/callback', [SocialLoginController::class, 'callback'])
+    ->name('auth.socilaite.callback');
+
+Route::get('auth/{provider}/user', [SocialController::class, 'index']);
+
+Route::get('orders/{order}/pay', [PaymentsController::class, 'create'])
+    ->name('orders.payments.create');
+
+Route::post('orders/{order}/stripe/paymeny-intent', [PaymentsController::class, 'createStripePaymentIntent'])
+    ->name('stripe.paymentIntent.create');
+
+Route::get('orders/{order}/pay/stripe/callback', [PaymentsController::class, 'confirm'])
+    ->name('stripe.return');
 
 
-Route::post('/paypal/webhook', function() {
-    echo 'Webhook called!';
-});
+
+Route::any('stripe/webhook', [StripeWebhooksController::class, 'handle']);
+
 
 // require __DIR__.'/auth.php';
 

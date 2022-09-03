@@ -25,6 +25,10 @@ class AppServiceProvider extends ServiceProvider
             return new CurrencyConverter(config('services.currency_converter.api_key'));
         });
 
+        $this->app->bind('stripe.client', function() {
+            return new \Stripe\StripeClient(config('services.stripe.secret_key'));
+        });
+
         if (App::environment('production')) {
             $this->app->singleton('path.public', function () {
                 return base_path('public_html');

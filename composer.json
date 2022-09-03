@@ -11,6 +11,7 @@
         "laravel/fortify": "^1.13",
         "laravel/framework": "^9.11",
         "laravel/sanctum": "^2.14.1",
+        "laravel/socialite": "^5.5",
         "laravel/tinker": "^2.7",
         "mcamara/laravel-localization": "^1.7",
         "pusher/pusher-php-server": "^7.0",

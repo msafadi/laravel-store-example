@@ -15,13 +15,13 @@
                             <div class="social-login">
                                 <div class="row">
                                     <div class="col-lg-4 col-md-4 col-12"><a class="btn facebook-btn"
-                                            href="javascript:void(0)"><i class="lni lni-facebook-filled"></i> Facebook
+                                            href="{{ route('auth.socilaite.redirect', 'facebook') }}"><i class="lni lni-facebook-filled"></i> Facebook
                                             login</a></div>
                                     <div class="col-lg-4 col-md-4 col-12"><a class="btn twitter-btn"
                                             href="javascript:void(0)"><i class="lni lni-twitter-original"></i> Twitter
                                             login</a></div>
                                     <div class="col-lg-4 col-md-4 col-12"><a class="btn google-btn"
-                                            href="javascript:void(0)"><i class="lni lni-google"></i> Google login</a>
+                                            href="{{ route('auth.socilaite.redirect', 'google') }}"><i class="lni lni-google"></i> Google login</a>
                                     </div>
                                 </div>
                             </div>
