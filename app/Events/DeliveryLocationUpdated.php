@@ -29,8 +29,8 @@ class DeliveryLocationUpdated implements ShouldBroadcast
     public function __construct(Delivery $delivery, $lat, $lng)
     {
         $this->delivery = $delivery;
-        $this->lat = $lat;
-        $this->lng = $lng;
+        $this->lat = (float) $lat;
+        $this->lng = (float) $lng;
     }
 
     /**
